@@ -1,9 +1,9 @@
 ;-----------------------------------------------------------------------|
 ;Global Variables                                                       |
 ;-----------------------------------------------------------------------|
-    Global path_to_hot_keys := ""
-    Global path_to_scripts := "C:\Users\Erik\Documents\Scripts\AHK_Script\Hot_Key_Scripts\"
-    Global path_to_menu_images := ""
+    Global path_to_hot_keys := "C:\Users\Erik\Documents\Scripts\AHK_Script\"
+    Global path_to_scripts := path_to_hot_keys . "Hot_Key_Scripts\"
+    Global path_to_menu_images := path_to_hot_keys . "MenuImages\"
 
 
 ;-----------------------------------------------------------------------|
@@ -47,16 +47,31 @@
     Menu, Sub_Menu_Memes, Add, ¯\_(ツ)_/¯ , shrug
     Menu, Sub_Menu_Memes, Add,  ¯\(°_o)/¯, i_dunno
 
-
     Menu, Sub_Menu_Websites, Add, Youtube, youtube
 
+    Menu, Sub_Menu_Projects, Add, edit default hot keys, default_hot_keys_edit
+
     Menu, Menu_Hot_Key, Add, Scripts, :Sub_Menu_Scripts
+    Menu, Menu_Hot_Key, Icon, Scripts, %path_to_menu_images%A.jpg, 1
     Menu, Menu_Hot_Key, Add, Memes, :Sub_Menu_Memes
+    Menu, Menu_Hot_Key, Icon, Memes, %path_to_menu_images%A.jpg, 1
     Menu, Menu_Hot_Key, Add, Websites, :Sub_Menu_Websites
+    Menu, Menu_Hot_Key, Icon, Websites, %path_to_menu_images%A.jpg, 1
+    Menu, Menu_Hot_Key, Add, Project Env, :Sub_Menu_Projects
+    Menu, Menu_Hot_Key, Icon, Project Env, %path_to_menu_images%A.jpg, 1
 
 return
 
     F2::Menu, Menu_Hot_Key, Show
+
+
+
+;-----------------------------------------------------------------------|
+;Web Commands                                                           |
+;-----------------------------------------------------------------------|
+    default_hot_keys_edit:
+    Run, notepad %path_to_hot_keys%Default_Hot_Keys.ahk
+return
 
 
 
