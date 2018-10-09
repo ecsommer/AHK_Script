@@ -57,8 +57,8 @@
     Menu, Menu_Hot_Key, Icon, Memes, %path_to_menu_images%A.jpg, 1
     Menu, Menu_Hot_Key, Add, Websites, :Sub_Menu_Websites
     Menu, Menu_Hot_Key, Icon, Websites, %path_to_menu_images%A.jpg, 1
-    Menu, Menu_Hot_Key, Add, Project Env, :Sub_Menu_Projects
-    Menu, Menu_Hot_Key, Icon, Project Env, %path_to_menu_images%A.jpg, 1
+    Menu, Menu_Hot_Key, Add, Project Startup, :Sub_Menu_Projects
+    Menu, Menu_Hot_Key, Icon, Project Startup, %path_to_menu_images%A.jpg, 1
 
 return
 
@@ -67,7 +67,7 @@ return
 
 
 ;-----------------------------------------------------------------------|
-;Web Commands                                                           |
+;Project startup Commands                                               |
 ;-----------------------------------------------------------------------|
     default_hot_keys_edit:
     Run, notepad %path_to_hot_keys%Default_Hot_Keys.ahk
