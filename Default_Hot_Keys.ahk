@@ -4,6 +4,7 @@
     Global path_to_hot_keys := "C:\Users\Erik\Documents\Scripts\AHK_Script\"
     Global path_to_scripts := path_to_hot_keys . "Hot_Key_Scripts\"
     Global path_to_menu_images := path_to_hot_keys . "MenuImages\"
+    Global path_to_vscode := "C:\Users\Erik\AppData\Local\Programs\Microsoft VS Code\"
 
 
 ;-----------------------------------------------------------------------|
@@ -70,7 +71,8 @@ return
 ;Project startup Commands                                               |
 ;-----------------------------------------------------------------------|
     default_hot_keys_edit:
-    Run, notepad %path_to_hot_keys%Default_Hot_Keys.ahk
+    Run, %path_to_vscode%Code.exe %path_to_hot_keys%
+    Run, %path_to_scripts%OpenAtDefaultHotKeysProject.bat
 return
 
 
