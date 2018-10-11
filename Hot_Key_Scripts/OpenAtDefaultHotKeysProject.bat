@@ -1,1 +1,1 @@
-powershell.exe -noexit -command "cd 'C:\Users\Erik\Documents\Scripts\AHK_Script\'"
+powershell.exe -noexit -command "cd 'C:\Users\Erik\Documents\Scripts\AHK_Script'"

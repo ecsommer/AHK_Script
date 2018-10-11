@@ -1,0 +1,1 @@
+powershell.exe -noexit -command "cd 'C:\Users\Erik\Documents\Code\Repositories\counter_target_bug\'";

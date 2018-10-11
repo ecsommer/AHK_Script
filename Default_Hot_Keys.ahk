@@ -4,7 +4,7 @@
     Global path_to_hot_keys := "C:\Users\Erik\Documents\Scripts\AHK_Script\"
     Global path_to_scripts := path_to_hot_keys . "Hot_Key_Scripts\"
     Global path_to_menu_images := path_to_hot_keys . "MenuImages\"
-    Global path_to_vscode := "C:\Users\Erik\AppData\Local\Programs\Microsoft VS Code\"
+    Global path_to_vscode := "C:\Users\Erik\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 
 
 ;-----------------------------------------------------------------------|
@@ -51,6 +51,7 @@
     Menu, Sub_Menu_Websites, Add, Youtube, youtube
 
     Menu, Sub_Menu_Projects, Add, edit default hot keys, default_hot_keys_edit
+    Menu, Sub_Menu_Projects, Add, edit counter target bug, counter_target_bug_edit
 
     Menu, Menu_Hot_Key, Add, Scripts, :Sub_Menu_Scripts
     Menu, Menu_Hot_Key, Icon, Scripts, %path_to_menu_images%A.jpg, 1
@@ -71,8 +72,12 @@ return
 ;Project startup Commands                                               |
 ;-----------------------------------------------------------------------|
     default_hot_keys_edit:
-    Run, %path_to_vscode%Code.exe %path_to_hot_keys%
+    Run, %path_to_vscode% %path_to_hot_keys%
     Run, %path_to_scripts%OpenAtDefaultHotKeysProject.bat
+return
+    counter_target_bug_edit:
+    Run, %path_to_vscode% C:\Users\Erik\Documents\Code\Repositories\counter_target_bug
+    Run, %path_to_scripts%OpenAtCounterTargetBugProject.bat
 return
 
 
