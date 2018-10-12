@@ -5,12 +5,14 @@
     Global path_to_scripts := path_to_hot_keys . "Hot_Key_Scripts\"
     Global path_to_menu_images := path_to_hot_keys . "MenuImages\"
     Global path_to_vscode := "C:\Users\Erik\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+    Global path_to_notes_folder := "C:\Users\Erik\Documents\Notes\"
 
 
 ;-----------------------------------------------------------------------|
 ;Hot Key Menu                                                           |
 ;-----------------------------------------------------------------------|
     Menu, Sub_Menu_Scripts, Add, Hello world, hello_world
+    Menu, Sub_Menu_Scripts, Add, Take note, take_note
 
     Menu, Sub_Menu_Memes, Add, ◕‿◕, smiling
     Menu, Sub_Menu_Memes, Add, ｡◕‿◕｡, surprised_and_smiling
@@ -210,4 +212,7 @@ return
 ;-----------------------------------------------------------------------|
     hello_world:
     Run, %path_to_scripts%HelloWorld.py
+return
+    take_note:
+    Run, %path_to_scripts%TakeNote.py %path_to_notes_folder% note "here is a message"
 return
