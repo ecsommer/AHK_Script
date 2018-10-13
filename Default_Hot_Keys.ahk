@@ -12,7 +12,7 @@
 ;Hot Key Menu                                                           |
 ;-----------------------------------------------------------------------|
     Menu, Sub_Menu_Scripts, Add, Hello world, hello_world
-    Menu, Sub_Menu_Scripts, Add, Take note, take_note
+    Menu, Sub_Menu_Scripts, Add, Take note, show_note_gui
 
     Menu, Sub_Menu_Memes, Add, ◕‿◕, smiling
     Menu, Sub_Menu_Memes, Add, ｡◕‿◕｡, surprised_and_smiling
@@ -207,6 +207,7 @@ return
 return
 
 
+
 ;-----------------------------------------------------------------------|
 ;Script Commands                                                        |
 ;-----------------------------------------------------------------------|
@@ -215,4 +216,19 @@ return
 return
     take_note:
     Run, %path_to_scripts%TakeNote.py %path_to_notes_folder% note "here is a message"
+return
+
+
+
+;-----------------------------------------------------------------------|
+;GUI                                                                    |
+;-----------------------------------------------------------------------|
+    show_note_gui:
+    Menu, Tray, Icon, %path_to_menu_images%A.jpg
+    Gui, Add, Text, x10 y15, Enter note file name:
+    Gui, Add, Edit, x110 y10 w200
+    Gui, Add, Text, x10 y40, Enter note:
+    Gui, Add, Edit, x10 y60 w480 h280
+    Gui, Add, Button, x205 y350 w90 h30, OK
+    Gui, Show, w500 h400, Create Note File
 return
