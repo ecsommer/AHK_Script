@@ -214,9 +214,6 @@ return
     hello_world:
     Run, %path_to_scripts%HelloWorld.py
 return
-    take_note:
-    Run, %path_to_scripts%TakeNote.py %path_to_notes_folder% note "here is a message"
-return
 
 
 
@@ -226,9 +223,14 @@ return
     show_note_gui:
     Menu, Tray, Icon, %path_to_menu_images%A.jpg
     Gui, Add, Text, x10 y15, Enter note file name:
-    Gui, Add, Edit, x110 y10 w200
+    Gui, Add, Edit, x110 y10 w200 vfile
     Gui, Add, Text, x10 y40, Enter note:
-    Gui, Add, Edit, x10 y60 w480 h280
+    Gui, Add, Edit, x10 y60 w480 h280 vnote
     Gui, Add, Button, x205 y350 w90 h30, OK
     Gui, Show, w500 h400, Create Note File
 return
+    ButtonOk:
+    Gui, Submit
+    Run, %path_to_scripts%TakeNote.py %path_to_notes_folder% "%file%" "%note%"
+    Gui, Destroy
+Return
