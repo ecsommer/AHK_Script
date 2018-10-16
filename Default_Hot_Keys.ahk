@@ -221,6 +221,7 @@ return
 ;GUI                                                                    |
 ;-----------------------------------------------------------------------|
     show_note_gui:
+    Gui, note_gui:New
     Menu, Tray, Icon, %path_to_menu_images%A.jpg
     Gui, Add, Text, x10 y15, Enter note file name:
     Gui, Add, Edit, x110 y10 w200 vfile
@@ -234,3 +235,14 @@ return
     Run, %path_to_scripts%TakeNote.py %path_to_notes_folder% "%file%" "%note%"
     Gui, Destroy
 Return
+
+
+
+;-----------------------------------------------------------------------|
+;Search                                                                 |
+;-----------------------------------------------------------------------|
+    CapsLock::
+    Gui, search_gui:New
+    Gui, Add, Edit, w180 vsearch
+    Gui, Show, w200 h50, Search
+return
