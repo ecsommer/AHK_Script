@@ -128,14 +128,32 @@ Return
 ;-----------------------------------------------------------------------|
     CapsLock::
     Gui, search_gui:New
-    Gui, search_gui:Add, Edit, w180 vsearch gfind_this
-    Gui, search_gui:Show, w200 h50, Search
+    Gui, search_gui:Add, Edit, w230 vsearch gfind_this
+    Gui, search_gui:Show, w250 h50, Search
 return
-
-
     find_this:
     Gui, Submit, NoHide
     #Include C:\Users\Erik\Documents\Scripts\AHK_Script\Search_GUI_Commands.ahk
+return
+
+search_site(url, title) {
+    Global url_to_search := url
+
+    Gui, search_site_gui:New
+    Gui, search_site_gui:Add, Edit, w230 vsearch
+    Gui, search_site_gui:Show, w250 h50, %title%
+    Hotkey, Enter, gfind_site, ON
+}
+    gfind_site:
+    Gui, search_site_gui:Submit, NoHide
+    Gui, search_site_gui:Destroy
+    Hotkey, Enter, Off
+    NewStr := StrReplace(url_to_search, "REPLACEME", search)
+    Run, %NewStr%
+return
+    search_site_guiGuiClose:
+    Gui, search_site_gui:Destroy
+    Hotkey, Enter, Off
 return
 
 

@@ -1,7 +1,13 @@
 ﻿;-----------------------------------------------------------------------|
 ;search commands                                                        |
 ;-----------------------------------------------------------------------|
-if (search == "G")
+if (search == "Google")
 {
-    msgbox, Google
+    Gui, Destroy
+    search_site("", "Google")
+}
+if (search == "Reddit")
+{
+    Gui, Destroy
+    search_site("https://www.reddit.com/search?q=REPLACEME", "Reddit")
 }
