@@ -133,6 +133,7 @@ Return
 return
     find_this:
     Gui, Submit, NoHide
+    StringLower, searchToLower, search
     #Include C:\Users\Erik\Documents\Scripts\AHK_Script\Search_GUI_Commands.ahk
 return
 
@@ -152,6 +153,24 @@ search_site(url, title) {
     Run, %NewStr%
 return
     search_site_guiGuiClose:
+    Gui, search_site_gui:Destroy
+    Hotkey, Enter, Off
+return
+
+search_sys_commands() {
+    Global url_to_search := url
+
+    Gui, search_sys_commands_gui:New
+    Gui, search_sys_commands_gui:Add, Edit, w230 vsearch
+    Gui, search_sys_commands_gui:Show, w250 h50, System
+    Hotkey, Enter, gfind_sys_commands, ON
+}
+    gfind_sys_commands:
+    Gui, search_sys_commands_gui:Submit, NoHide
+    Gui, search_sys_commands_gui:Destroy
+    Hotkey, Enter, Off
+return
+    search_sys_commandssearch_site_guiGuiClose:
     Gui, search_site_gui:Destroy
     Hotkey, Enter, Off
 return
