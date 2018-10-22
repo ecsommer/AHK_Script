@@ -13,6 +13,7 @@
 ;-----------------------------------------------------------------------|
     Menu, Sub_Menu_Scripts, Add, Hello world, hello_world
     Menu, Sub_Menu_Scripts, Add, Take note, show_note_gui
+    Menu, Sub_Menu_Scripts, Add, Start Grid, start_grid
 
     Menu, Sub_Menu_Memes, Add, ◕‿◕, smiling
     Menu, Sub_Menu_Memes, Add, ｡◕‿◕｡, surprised_and_smiling
@@ -99,6 +100,9 @@ return
     hello_world:
     Run, %path_to_scripts%HelloWorld.py
 return
+    start_grid:
+    Run, %path_to_scripts%RunGrid.bat
+return
 
 
 
@@ -115,7 +119,7 @@ return
     Gui, Add, Button, x205 y350 w90 h30, OK
     Gui, Show, w500 h400, Create Note File
 return
-    ButtonOk:
+    note_guiButtonOk:
     Gui, Submit
     Run, %path_to_scripts%TakeNote.py %path_to_notes_folder% "%file%" "%note%"
     Gui, Destroy
