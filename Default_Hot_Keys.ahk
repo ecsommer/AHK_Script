@@ -14,6 +14,7 @@
     Menu, Sub_Menu_Scripts, Add, Hello world, hello_world
     Menu, Sub_Menu_Scripts, Add, Take note, show_note_gui
     Menu, Sub_Menu_Scripts, Add, Start Grid, start_grid
+    Menu, Sub_Menu_Scripts, Add, Amazon Review, amazon_word_cloud_review
 
     Menu, Sub_Menu_Memes, Add, ◕‿◕, smiling
     Menu, Sub_Menu_Memes, Add, ｡◕‿◕｡, surprised_and_smiling
@@ -124,6 +125,21 @@ return
     Run, %path_to_scripts%TakeNote.py %path_to_notes_folder% "%file%" "%note%"
     Gui, Destroy
 Return
+
+    amazon_word_cloud_review:
+    Gui, amazon_review:New
+    Menu, Tray, Icon, %path_to_menu_images%A.jpg
+    Gui, Add, Text, x10 y15, Enter review URL:
+    Gui, Add, Edit, x110 y10 w350 vurl
+    Gui, Add, Button, x205 y50 w90 h30, OK
+    Gui, Show, w500 h100, Review Word Cloud
+return
+    amazon_reviewButtonOk:
+    Gui, Submit
+    Run, %path_to_scripts%AmazonReviewScraper.py "%url%"
+    Run, %path_to_scripts%WordCloud.py 
+    Gui, Destroy
+Return    
 
 
 
