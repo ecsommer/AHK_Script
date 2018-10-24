@@ -1,1 +1,0 @@
-powershell.exe -noexit -command "cd C:\Users\Erik\Documents\Scripts\Grid_Quick_Start\LocalSetup"

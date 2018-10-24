@@ -102,7 +102,7 @@ return
     Run, %path_to_scripts%HelloWorld.py
 return
     start_grid:
-    Run, %path_to_scripts%RunGrid.bat
+    Run, C:\Users\Erik\Documents\Scripts\Grid_Quick_Start\LocalSetup\startGrid.bat
 return
 
 
