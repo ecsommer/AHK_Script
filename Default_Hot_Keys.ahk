@@ -80,7 +80,7 @@ return
     Run, %path_to_scripts%OpenAtDefaultHotKeysProject.bat
 return
     counter_target_bug_edit:
-    Run, %path_to_vscode% C:\Users\Erik\Documents\Code\Repositories\counter_target_bug
+    Run, %path_to_vscode% C:\Users\Erik\Documents\Code\Repositories\GitHub\Counter_Target_Bug
     Run, %path_to_scripts%OpenAtCounterTargetBugProject.bat
 return
 
@@ -111,8 +111,8 @@ return
 ;GUI                                                                    |
 ;-----------------------------------------------------------------------|
     show_note_gui:
-    Gui, note_gui:New
     Menu, Tray, Icon, %path_to_menu_images%A.jpg
+    Gui, note_gui:New
     Gui, Add, Text, x10 y15, Enter note file name:
     Gui, Add, Edit, x110 y10 w200 vfile
     Gui, Add, Text, x10 y40, Enter note:
@@ -127,8 +127,8 @@ return
 Return
 
     amazon_word_cloud_review:
-    Gui, amazon_review:New
     Menu, Tray, Icon, %path_to_menu_images%A.jpg
+    Gui, amazon_review:New
     Gui, Add, Text, x10 y15, Enter review URL:
     Gui, Add, Edit, x110 y10 w350 vurl
     Gui, Add, Button, x205 y50 w90 h30, OK
@@ -160,8 +160,9 @@ return
 search_site(url, title) {
     Global url_to_search := url
 
+    Menu, Tray, Icon, %path_to_menu_images%%title%.png
     Gui, search_site_gui:New
-    Gui, search_site_gui:Add, Edit, w230 vsearch
+    Gui, search_site_gui:Add, Edit, w230 vsearch    
     Gui, search_site_gui:Show, w250 h50, %title%
     Hotkey, Enter, gfind_site, ON
 }
