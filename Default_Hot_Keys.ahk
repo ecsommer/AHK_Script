@@ -147,6 +147,7 @@ Return
 ;Search                                                                 |
 ;-----------------------------------------------------------------------|
     CapsLock::
+    Menu, Tray, Icon, %path_to_menu_images%Search.PNG
     Gui, search_gui:New
     Gui, search_gui:Add, Edit, w230 vsearch gfind_this
     Gui, search_gui:Show, w250 h50, Search
@@ -181,6 +182,7 @@ return
 search_sys_commands() {
     Global url_to_search := url
 
+    Menu, Tray, Icon, %path_to_menu_images%Command.PNG
     Gui, search_sys_commands_gui:New
     Gui, search_sys_commands_gui:Add, Edit, w230 vsearch
     Gui, search_sys_commands_gui:Show, w250 h50, System
