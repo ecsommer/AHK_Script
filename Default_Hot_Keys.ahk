@@ -108,7 +108,20 @@ return
 
 
 ;-----------------------------------------------------------------------|
-;GUI                                                                    |
+;Remapped hot keys                                                      |
+;-----------------------------------------------------------------------|
+    F4:: ; google highlighted text
+    clipboard =  ; empy clipboard
+    Send ^c
+    ClipWait
+    googleString := StrReplace("https://www.google.com/search?q=REPLACEME", "REPLACEME", clipboard)
+    Run, %googleString%
+return
+
+
+
+;-----------------------------------------------------------------------|
+;Take Note                                                              |
 ;-----------------------------------------------------------------------|
     show_note_gui:
     Menu, Tray, Icon, %path_to_menu_images%A.jpg
@@ -126,6 +139,11 @@ return
     Gui, Destroy
 Return
 
+
+
+;-----------------------------------------------------------------------|
+;Amazon Review Cloud                                                    |
+;-----------------------------------------------------------------------|
     amazon_word_cloud_review:
     Menu, Tray, Icon, %path_to_menu_images%A.jpg
     Gui, amazon_review:New
