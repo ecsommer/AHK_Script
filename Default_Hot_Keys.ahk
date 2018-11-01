@@ -53,6 +53,12 @@
     Menu, Sub_Menu_Memes, Add,  ¯\(°_o)/¯, i_dunno
 
     Menu, Sub_Menu_Websites, Add, Youtube, youtube
+    Menu, Sub_Menu_Websites, Add, TCGPlayer, tcgplayer
+    Menu, Sub_Menu_Websites, Add, Lynda, lynda
+    Menu, Sub_Menu_Websites, Add, Fantasy Flight, fantasy_flight
+    Menu, Sub_Menu_Websites, Add, Lodestone, lodestone
+    Menu, Sub_Menu_Websites, Add, Amazon, amazon
+    Menu, Sub_Menu_Websites, Add, Netflix, netflix
 
     Menu, Sub_Menu_Projects, Add, edit default hot keys, default_hot_keys_edit
     Menu, Sub_Menu_Projects, Add, edit counter target bug, counter_target_bug_edit
@@ -92,6 +98,25 @@ return
     youtube:
     Run, https://www.youtube.com/
 return
+    tcgplayer:
+    Run, https://www.tcgplayer.com/
+return
+    lynda:
+    Run, https://www.lynda.com/
+return
+    fantasy_flight:
+    Run, https://www.fantasyflightgames.com/en/index/
+return
+    lodestone:
+    Run, http://www.lodestonecoffeeandgames.com/
+return
+    amazon:
+    Run, https://www.amazon.com/
+return
+    netflix:
+    Run, https://www.netflix.com/browse
+return
+
 
 
 
@@ -110,7 +135,7 @@ return
 ;-----------------------------------------------------------------------|
 ;Remapped hot keys                                                      |
 ;-----------------------------------------------------------------------|
-    F4:: ; google highlighted text
+    F4:: ; Google highlighted text
     clipboard =  ; empy clipboard
     Send ^c
     ClipWait
