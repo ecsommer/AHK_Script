@@ -180,7 +180,6 @@ return
     amazon_reviewButtonOk:
     Gui, Submit
     Run, %path_to_scripts%AmazonReviewScraper.py "%url%"
-    Run, %path_to_scripts%WordCloud.py 
     Gui, Destroy
 Return    
 
