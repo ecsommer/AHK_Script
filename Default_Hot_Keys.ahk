@@ -53,12 +53,18 @@
     Menu, Sub_Menu_Memes, Add,  ¯\(°_o)/¯, i_dunno
 
     Menu, Sub_Menu_Websites, Add, Youtube, youtube
+    Menu, Sub_Menu_Websites, Icon, Youtube, %path_to_menu_images%youtube.png
     Menu, Sub_Menu_Websites, Add, TCGPlayer, tcgplayer
+    Menu, Sub_Menu_Websites, Icon, TCGPlayer, %path_to_menu_images%tcgplayer.png
     Menu, Sub_Menu_Websites, Add, Lynda, lynda
+    Menu, Sub_Menu_Websites, Icon, Lynda, %path_to_menu_images%lynda.png
     Menu, Sub_Menu_Websites, Add, Fantasy Flight, fantasy_flight
     Menu, Sub_Menu_Websites, Add, Lodestone, lodestone
     Menu, Sub_Menu_Websites, Add, Amazon, amazon
+    Menu, Sub_Menu_Websites, Icon, Amazon, %path_to_menu_images%amazon.png
     Menu, Sub_Menu_Websites, Add, Netflix, netflix
+    Menu, Sub_Menu_Websites, Add, Reddit, reddit
+    Menu, Sub_Menu_Websites, Icon, Reddit, %path_to_menu_images%reddit.png
 
     Menu, Sub_Menu_Projects, Add, edit default hot keys, default_hot_keys_edit
     Menu, Sub_Menu_Projects, Add, edit counter target bug, counter_target_bug_edit
@@ -116,6 +122,9 @@ return
     netflix:
     Run, https://www.netflix.com/browse
 return
+    reddit:
+    Run, https://www.reddit.com/
+return
 
 
 
@@ -123,9 +132,6 @@ return
 ;-----------------------------------------------------------------------|
 ;Script Commands                                                        |
 ;-----------------------------------------------------------------------|
-    hello_world:
-    Run, %path_to_scripts%HelloWorld.py
-return
     start_grid:
     Run, C:\Users\Erik\Documents\Scripts\Grid_Quick_Start\LocalSetup\startGrid.bat
 return
