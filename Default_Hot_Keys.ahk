@@ -11,7 +11,6 @@
 ;-----------------------------------------------------------------------|
 ;Hot Key Menu                                                           |
 ;-----------------------------------------------------------------------|
-    Menu, Sub_Menu_Scripts, Add, Hello world, hello_world
     Menu, Sub_Menu_Scripts, Add, Take note, show_note_gui
     Menu, Sub_Menu_Scripts, Add, Start Grid, start_grid
     Menu, Sub_Menu_Scripts, Add, Amazon Review, amazon_word_cloud_review
