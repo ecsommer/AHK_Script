@@ -1,2 +1,2 @@
 # AHK_Script
-Holds AutoHotKey Scripts..
+Holds AutoHotKey Scripts...
