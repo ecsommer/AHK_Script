@@ -1,11 +1,11 @@
 ;-----------------------------------------------------------------------|
 ;Global Variables                                                       |
 ;-----------------------------------------------------------------------|
-    Global path_to_hot_keys := "C:\Users\Erik\Documents\Scripts\AHK_Script\"
+    Global path_to_hot_keys := "C:\Users\sommeri\Projects\AHK_Script\"
     Global path_to_scripts := path_to_hot_keys . "Hot_Key_Scripts\"
     Global path_to_menu_images := path_to_hot_keys . "MenuImages\"
     Global path_to_vscode := "C:\Users\Erik\AppData\Local\Programs\Microsoft VS Code\Code.exe"
-    Global path_to_notes_folder := "C:\Users\Erik\Documents\Notes\"
+    Global path_to_notes_folder := "\\chr100\users\SOMMERI\Notes\"
 
 
 ;-----------------------------------------------------------------------|
@@ -51,6 +51,9 @@
     Menu, Sub_Menu_Memes, Add, ¯\_(ツ)_/¯ , shrug
     Menu, Sub_Menu_Memes, Add,  ¯\(°_o)/¯, i_dunno
 
+    Menu, Sub_Menu_Websites, Add, qualityEngineering
+    Menu, Sub_Menu_Websites, Add, performanceTest
+    Menu, Sub_Menu_Websites, Add, testGeneration
     Menu, Sub_Menu_Websites, Add, Youtube, youtube
     Menu, Sub_Menu_Websites, Icon, Youtube, %path_to_menu_images%youtube.png
     Menu, Sub_Menu_Websites, Add, TCGPlayer, tcgplayer
@@ -123,6 +126,15 @@ return
 return
     reddit:
     Run, https://www.reddit.com/
+return
+    qualityEngineering:
+    Run, https://github.chrobinson.com/CHR/QualityEngineering
+return
+    performanceTest:
+    Run, https://github.chrobinson.com/CHR/QE.Performance.Tests
+return
+    testGeneration:
+    Run, https://github.chrobinson.com/CHR/QE.Performance.TestGenerationUtility
 return
 
 
@@ -202,7 +214,7 @@ return
     find_this:
     Gui, Submit, NoHide
     StringLower, searchToLower, search
-    #Include C:\Users\Erik\Documents\Scripts\AHK_Script\Search_GUI_Commands.ahk
+    #Include C:\Users\sommeri\Projects\AHK_Script\Search_GUI_Commands.ahk
 return
 
 search_site(url, title) {
@@ -250,4 +262,4 @@ return
 ;-----------------------------------------------------------------------|
 ;Meme Commands                                                          |
 ;-----------------------------------------------------------------------|
-#Include C:\Users\Erik\Documents\Scripts\AHK_Script\Memes.ahk
+#Include C:\Users\sommeri\Projects\AHK_Script\Memes.ahk
